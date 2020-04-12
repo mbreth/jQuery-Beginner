@@ -1,4 +1,4 @@
-<!-- using jQuery to get value from SELECT tag and then display a message -->
+<!-- jQuery getting value from a select tag and also adding a class to an object -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -32,6 +33,7 @@
           let userSelection = $("#animals").val();
           if (userSelection === "Turtles") {
             $("#display").html("Thats my favorite animal too!");
+            $("#display").addClass("turtleChoice");
           } else {
             $("#display").html(
               "That is a great animal too, but I like Turtles more!"
@@ -43,6 +45,7 @@
         "background-color": "lightgrey",
         "text-align": "center"
       });
+      $("h1").addClass("wangchung");
     </script>
   </body>
 </html>
