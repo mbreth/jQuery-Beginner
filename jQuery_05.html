@@ -1,0 +1,48 @@
+<!-- using jQuery to get value from SELECT tag and then display a message -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <title>Static Template</title>
+  </head>
+  <body>
+    <h1>jQuery methods demo page</h1>
+    <h4>Please select your favorite animal</h4>
+    <select id="animals">
+      <option>Sharks</option>
+      <option>Turtles</option>
+      <option>Tigers</option>
+      <option>Iguanas</option>
+      <option>Lions</option>
+      <option>Sloths</option>
+    </select>
+    <p id="display"></p>
+    <button id="submit">Submit</button>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#submit").click(function() {
+          let userSelection = $("#animals").val();
+          if (userSelection === "Turtles") {
+            $("#display").html("Thats my favorite animal too!");
+          } else {
+            $("#display").html(
+              "That is a great animal too, but I like Turtles more!"
+            );
+          }
+        });
+      });
+      $("body").css({
+        "background-color": "lightgrey",
+        "text-align": "center"
+      });
+    </script>
+  </body>
+</html>
